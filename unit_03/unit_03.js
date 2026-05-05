@@ -1,7 +1,9 @@
 // Task 1
-/
+
 function f1(){
-   
+   let inputValue = document.querySelector('.i-1').value;
+   let result = (inputValue == 4);
+   document.querySelector('.out-1').textContent = result;
 }
 
 document.querySelector('.b-1').onclick = f1;
@@ -11,7 +13,7 @@ document.querySelector('.b-1').onclick = f1;
 
 
 function f2(){
-  
+
 }
 
 document.querySelector('.b-2').onclick = f2;
@@ -20,7 +22,11 @@ document.querySelector('.b-2').onclick = f2;
 // Task 3
 
 function f3(){
-   
+   let num1 = document.querySelector('.i-31').value;
+   let num2 = document.querySelector('.i-32').value;
+
+   let result = (num1 > num2)? num1 : num2;
+   document.querySelector('.out-5').textContent = result;
 }
 
 document.querySelector('.b-3').onclick = f3;
