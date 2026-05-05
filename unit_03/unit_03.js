@@ -26,7 +26,7 @@ function f3(){
    let num2 = document.querySelector('.i-32').value;
 
    let result = (num1 > num2)? num1 : num2;
-   document.querySelector('.out-5').textContent = result;
+   document.querySelector('.out-3').textContent = result;
 }
 
 document.querySelector('.b-3').onclick = f3;
@@ -36,7 +36,11 @@ document.querySelector('.b-3').onclick = f3;
 
 
 function f4() {
-  
+    let birthYear = +document.querySelector('.i-4').value;
+    let currentYear = new Date().getFullYear();
+
+    let result = (currentYear - birthYear >= 18)? 1:0;
+    document.querySelector('.out-4').textContent = result;
 }
 
 document.querySelector('.b-4').onclick = f4;
@@ -146,7 +150,22 @@ document.querySelector('.b-14').onclick = f14;
 
 
 function f15() {
-  
+    let num1 = document.querySelector('.s-151').value;
+    let num2 = document.querySelector('.s-152').value;
+    let oper = document.querySelector('.s-153').value;
+    let result = 0;
+
+    switch (oper){
+        case '&&':
+            result = (num1 === '1' && num2 == '1')? 1:0;
+            break
+        case '||':
+            result = (num1 === '1' || num2 == '1')? 1:0;
+            break
+        default:
+            result = 'unknown'
+    }
+    document.querySelector('.out-15').textContent = result;
 }
 
 document.querySelector('.b-15').onclick = f15;
